@@ -1,10 +1,11 @@
 {
-  "name": "node-express-mongodb-crud-template",
-  "version": "1.0.1",
+  "name": "express-mongodb-crud-template",
+  "version": "1.0.2",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "node setup.js"
   },
   "author": "linkon63",
   "license": "ISC",
@@ -18,7 +19,9 @@
   "devDependencies": {
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.11.7",
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.0.3",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
   },
   "repository": {
     "type": "git",

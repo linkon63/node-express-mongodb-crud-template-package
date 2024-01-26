@@ -61,5 +61,5 @@ async function run() {
 run().catch(console.dir);
 
 app.listen(port, () => {
-  console.log(`Example node express template app listening on port - ${port}`);
+  console.log(port);
 });

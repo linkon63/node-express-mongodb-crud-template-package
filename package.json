@@ -1,6 +1,6 @@
 {
   "name": "express-mongodb-crud-template",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -36,5 +36,6 @@
   "bugs": {
     "url": "https://github.com/linkon63/node-express-mongodb-crud-template-package/issues"
   },
-  "homepage": "https://github.com/linkon63/node-express-mongodb-crud-template-package#readme"
+  "homepage": "https://github.com/linkon63/node-express-mongodb-crud-template-package#readme",
+  "customProperty": "Some custom value"
 }

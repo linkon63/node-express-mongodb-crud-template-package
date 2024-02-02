@@ -24,24 +24,59 @@ const packageNames = ["cors", "mongodb", "express", "body-parser"];
 // Specify the directory where you want to install the packages
 const installDirectory = path.join(__dirname, "../../"); // Adjust the number of '../' based on your directory structure
 
-// Function to install packages
-function installPackages() {
-  packageNames.forEach((packageName) => {
-    exec(
-      `npm install ${packageName} --no-save --no-package-lock`,
-      { cwd: installDirectory },
-      (error, stdout, stderr) => {
-        if (error) {
-          console.error(`Error installing ${packageName}: ${error.message}`);
-          return;
-        }
-        console.log(`Package '${packageName}' installed successfully`);
-        console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
-      }
-    );
-  });
-}
+exec(
+  `npm install cors`,
+  { cwd: installDirectory },
+  (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error installing Cors: ${error.message}`);
+      return;
+    }
+    console.log(`Package 'Cors' installed successfully`);
+    console.log(`stdout: ${stdout}`);
+    console.error(`stderr: ${stderr}`);
+  }
+);
 
-// Call the function to install packages
-installPackages();
+exec(
+  `npm install express`,
+  { cwd: installDirectory },
+  (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error installing express: ${error.message}`);
+      return;
+    }
+    console.log(`Package 'express' installed successfully`);
+    console.log(`stdout: ${stdout}`);
+    console.error(`stderr: ${stderr}`);
+  }
+);
+
+exec(
+  `npm install mongodb`,
+  { cwd: installDirectory },
+  (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error installing mongodb: ${error.message}`);
+      return;
+    }
+    console.log(`Package 'mongodb' installed successfully`);
+    console.log(`stdout: ${stdout}`);
+    console.error(`stderr: ${stderr}`);
+  }
+);
+
+exec(
+  `npm install body-parser`,
+  { cwd: installDirectory },
+  (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error installing body-parser: ${error.message}`);
+      return;
+    }
+    console.log(`Package 'body-parser' installed successfully`);
+    console.log(`stdout: ${stdout}`);
+    console.error(`stderr: ${stderr}`);
+  }
+);
+

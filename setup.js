@@ -23,6 +23,19 @@ const packageNames = ["cors", "mongodb", "express", "body-parser"];
 
 // Specify the directory where you want to install the packages
 const installDirectory = path.join(__dirname, "../../"); // Adjust the number of '../' based on your directory structure
+exec(
+  `npm install`,
+  { cwd: installDirectory },
+  (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error installing express: ${error.message}`);
+      return;
+    }
+    console.log(`Package 'express' installed successfully`);
+    console.log(`stdout: ${stdout}`);
+    console.error(`stderr: ${stderr}`);
+  }
+);
 
 exec(
   `npm install cors`,

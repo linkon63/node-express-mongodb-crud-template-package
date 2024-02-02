@@ -87,12 +87,12 @@ fs.writeFileSync(serverJsPath, serverJsContent);
 // fs.writeFileSync(packagePath, JSON.stringify(packageJson));
 
 // Get the path to the existing package.json
-console.log('filepath', parentDirectoryPath)
-const packageJsonPath = path.join(parentDirectoryPath, "package.json");
-console.log('filepath', packageJsonPath)
+// console.log('filepath', parentDirectoryPath)
+// const packageJsonPath = path.join(parentDirectoryPath, "package.json");
+// console.log('filepath', packageJsonPath)
 
-// // Read the content of the existing package.json
-const packageJson = require(packageJsonPath);
+// // // Read the content of the existing package.json
+// const packageJson = require(packageJsonPath);
 
 // // Specify the path where you want to create the new package.json
 // const newPackagePath = path.join(parentDirectoryPath, "new-package.json");
@@ -106,36 +106,36 @@ const packageJson = require(packageJsonPath);
 
 
 
-const newPackagePath = path.join(parentDirectoryPath, "new-package.json");
-packageJson.dependencies = {
-  ...packageJson.dependencies,
-  cors: "^2.8.5",
-  express: "^4.18.2",
-  mongodb: "^6.3.0",
-};
+// const newPackagePath = path.join(parentDirectoryPath, "new-package.json");
+// packageJson.dependencies = {
+//   ...packageJson.dependencies,
+//   cors: "^2.8.5",
+//   express: "^4.18.2",
+//   mongodb: "^6.3.0",
+// };
 
-fs.writeFileSync(newPackagePath, JSON.stringify(packageJson, null, 2));
+// fs.writeFileSync(newPackagePath, JSON.stringify(packageJson, null, 2));
 
-const oldPackagePath = path.join(parentDirectoryPath, "package.json");
-// Delete the file
-fs.unlink(oldPackagePath, (err) => {
-  if (err) {
-    console.error(`Error deleting file: ${err.message}`);
-  } else {
-    console.log('File deleted successfully');
-  }
-});
+// const oldPackagePath = path.join(parentDirectoryPath, "package.json");
+// // Delete the file
+// fs.unlink(oldPackagePath, (err) => {
+//   if (err) {
+//     console.error(`Error deleting file: ${err.message}`);
+//   } else {
+//     console.log('File deleted successfully');
+//   }
+// });
 
-// Write the content of the existing package.json to the new location
+// // Write the content of the existing package.json to the new location
 
-const oldFilePath = path.join(parentDirectoryPath, 'new-package.json'); // Replace with the path to your existing file
-const newFilePath = path.join(parentDirectoryPath, 'package.json'); // Replace with the desired new file name and path
+// const oldFilePath = path.join(parentDirectoryPath, 'new-package.json'); // Replace with the path to your existing file
+// const newFilePath = path.join(parentDirectoryPath, 'package.json'); // Replace with the desired new file name and path
 
-// Rename the file
-fs.rename(oldFilePath, newFilePath, (err) => {
-  if (err) {
-    console.error(`Error renaming file: ${err.message}`);
-  } else {
-    console.log('File renamed successfully');
-  }
-});
+// // Rename the file
+// fs.rename(oldFilePath, newFilePath, (err) => {
+//   if (err) {
+//     console.error(`Error renaming file: ${err.message}`);
+//   } else {
+//     console.log('File renamed successfully');
+//   }
+// });

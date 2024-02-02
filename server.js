@@ -3,8 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 // Your mongodb uri
-const uri =
-  "mongodb+srv://user:passwordcc1@cluster0.uzrx08v.mongodb.net/?retryWrites=true&w=majority";
+const uri = ""; // Setup your mongodb uri
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -27,7 +26,9 @@ async function run() {
     const client = new MongoClient(uri);
 
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect().catch((err) => console.error(err));
+    await client
+      .connect()
+      .catch((err) => console.error("Connection error : ", err));
     console.log("Database connection established 🧑‍💻...");
 
     app.get("/", (req, res) => {

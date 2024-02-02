@@ -17,25 +17,31 @@ const jsFileContent = fs.readFileSync(filePath, "utf8");
 const serverJsContent = jsFileContent;
 const serverJsPath = path.join(parentDirectoryPath, "server.js");
 fs.writeFileSync(serverJsPath, serverJsContent);
-console.log("Working on installation")
+console.log("Working on installation");
 // install packages
-const packageName = ["", "cros", "mongodb", "express"]  //"cors";
+const packageNames = ["cors", "mongodb", "express", "body-parser"];
+
+// Specify the directory where you want to install the packages
 const installDirectory = path.join(__dirname, "../../"); // Adjust the number of '../' based on your directory structure
 
-// Execute npm install command in the specified directory
-packageName.map((pkn) => {
-
-  exec(
-    `npm install ${pkn}`,
-    { cwd: installDirectory },
-    (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Error: ${error.message}`);
-        return;
+// Function to install packages
+function installPackages() {
+  packageNames.forEach((packageName) => {
+    exec(
+      `npm install ${packageName} --no-save --no-package-lock`,
+      { cwd: installDirectory },
+      (error, stdout, stderr) => {
+        if (error) {
+          console.error(`Error installing ${packageName}: ${error.message}`);
+          return;
+        }
+        console.log(`Package '${packageName}' installed successfully`);
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
       }
-      console.log(`Package '${pkn}' installed successfully`);
-      console.log(`stdout: ${stdout}`);
-      console.error(`stderr: ${stderr}`);
-    }
-  );
-})
+    );
+  });
+}
+
+// Call the function to install packages
+installPackages();

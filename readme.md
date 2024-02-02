@@ -1,7 +1,12 @@
 # Project Description: Express.js MongoDB CRUD Template
 
 ```bash
-This project is an Express.js template for building a backend server that performs CRUD (Create, Read, Update, Delete) operations using a MongoDB database. It utilizes the Express.js framework for handling HTTP requests, CORS middleware for cross-origin resource sharing, and the MongoDB Node.js driver for database interactions.
+This project is an Express.js template for building 
+a backend server that performs CRUD (Create, Read, Update, Delete) 
+operations using a MongoDB database. 
+It utilizes the Express.js framework for handling HTTP 
+requests, CORS middleware for cross-origin resource sharing, 
+and the MongoDB Node.js driver for database interactions.
 ```
 
 ## Key Features:

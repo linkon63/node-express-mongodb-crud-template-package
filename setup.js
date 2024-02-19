@@ -19,19 +19,19 @@ const serverJsContent = jsFileContent;
 const serverJsPath = path.join(parentDirectoryPath, "server.js");
 fs.writeFileSync(serverJsPath, serverJsContent);
 
-console.log("Working on installation");
+// console.log("Working on installation");
 
-const installDirectory = path.join(__dirname, "../../"); // Adjust the number of '../' based on your directory structure
+// const installDirectory = path.join(__dirname, "../../"); // Adjust the number of '../' based on your directory structure
 
-// Example: Run a shell command synchronously
-try {
-  const result = execSync("npm install express mongodb cors body-parser", {
-    cwd: installDirectory,
-  });
-  console.log(result.toString()); // Output of the command
-} catch (error) {
-  console.error("Installation Error", error.stderr); // Error output
-}
+// // Example: Run a shell command synchronously
+// try {
+//   const result = execSync("npm install express mongodb cors body-parser", {
+//     cwd: installDirectory,
+//   });
+//   console.log(result.toString()); // Output of the command
+// } catch (error) {
+//   console.error("Installation Error", error.stderr); // Error output
+// }
 
 // // install packages
 // const packageNames = ["cors", "mongodb", "express", "body-parser"];

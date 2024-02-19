@@ -3,6 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 // Your mongodb uri
+// Step 1 : 
 const uri = "";
 ; // Setup your mongodb uri
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -32,8 +33,10 @@ async function run() {
       .catch((err) => console.error("Connection error : ", err));
 
     console.log("Database connection established 🧑‍💻...");
+    // Step 2 : 
     const yourDBName = '' // please give your database name here
     const db = await client.db(yourDBName)
+    // Step 3 : 
     const userCollection = await db.collection("yourUserCollectionName") // Give your table / collection name
     const productCollection = await db.collection("yourProductCollectionName") // Give your table / collection name
     // ... so on if there is more collection

@@ -49,5 +49,3 @@ Usage:
 Run the application using 
 $ node server.js
 ```
-
-This template provides a starting point for developing a scalable and maintainable backend for applications requiring MongoDB integration. Customize the routes, implement additional features, and follow best practices for security and performance to tailor the template to your specific project needs.

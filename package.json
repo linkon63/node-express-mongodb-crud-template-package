@@ -1,23 +1,43 @@
 {
-  "name": "express-crud-app",
-  "version": "1.0.0",
+  "name": "express-mongodb-crud-template",
+  "version": "3.1.0",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "node setup.js"
   },
   "author": "linkon63",
   "license": "ISC",
-  "description": "",
+  "description": "```bash This project is an Express.js template for building a backend server that performs CRUD (Create, Read, Update, Delete) operations using a MongoDB database. It utilizes the Express.js framework for handling HTTP requests, CORS middleware for cross-origin resource sharing, and the MongoDB Node.js driver for database interactions. ```",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "inquirer": "^9.2.12",
     "mongodb": "^6.3.0"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.11.7",
-    "nodemon": "^3.0.3"
-  }
+    "nodemon": "^3.0.3",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linkon63/node-express-mongodb-crud-template-package.git"
+  },
+  "keywords": [
+    "[\"express\"",
+    "\"crud\"",
+    "\"mongodb\"",
+    "\"template\"]"
+  ],
+  "bugs": {
+    "url": "https://github.com/linkon63/node-express-mongodb-crud-template-package/issues"
+  },
+  "homepage": "https://github.com/linkon63/node-express-mongodb-crud-template-package#readme",
+  "customProperty": "Some custom value"
 }

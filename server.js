@@ -5,7 +5,7 @@ const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 // Your mongodb uri
 // Step 1 : 
 const uri = "";
-; // Setup your mongodb uri
+// Setup your mongodb uri
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {

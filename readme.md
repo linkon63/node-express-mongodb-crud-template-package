@@ -1,4 +1,4 @@
-# Project Description: Express.js MongoDB CRUD Template
+# Express.js MongoDB CRUD Template
 
 ```bash
 This project is an Express.js template for building
@@ -9,19 +9,20 @@ operations using a MongoDB database.
 ### Installation
 
 ```bash
-npm i express-mongodb-crud-template
-npm i express mongodb cors body-parser
+💻 npm i express-mongodb-crud-template
+💻 npm i express mongodb cors body-parser nodemon
+🖱 # run this command to setup 
+🖱 # then follow the steps are there is server.js file
+🖱 # then run the npm start 
+📃 # package.json file "start": "nodemon server.js",
+💻 npm start
 
-# run this command to setup 
-
-# then follow the steps are there is server.js file
 ```
 
-#### Key Features:
+## 🔑 Key Features:
 
-#### Database Connection:
-
-#### Establishes a secure connection to a MongoDB Atlas database using the provided MongoDB URI.
+### ⚙️ Database Connection:
+### 🔩 Establishes a secure connection to a MongoDB Atlas database using the provided MongoDB URI.
 
 ```bash
 Express.js Server:
@@ -53,11 +54,4 @@ Basic error handling is incorporated to catch and log any errors during database
 Usage:
 ```
 
-#### Note : Ensure that a MongoDB Atlas account is set up, and replace the uri variable with your own MongoDB URI.
-
-#### Install dependencies using npm install.
-
-```bash
-Run the application using
-$ node server.js
-```
+### 📋 Note : Ensure that a MongoDB Atlas account is set up, and replace the uri variable with your own MongoDB URI.
